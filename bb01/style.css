@@ -15,7 +15,7 @@ li {
   transform-style: preserve-3d;
   transform-origin: var(--origin, center center);
   
-  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image01);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image01.png);
 }
 
 li,
@@ -42,13 +42,13 @@ li::after {
 }
 
 li::before {
-  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image02);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image02.png);
   --direction: -1;
   --origin-x: 100%;
   
 }
 li::after {
-  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image03);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image03.png);
   --direction: 1;
   --origin-x: 0%;
 }
