@@ -1,0 +1,97 @@
+.billboard {
+  display: flex;
+  --boards: 16;
+  --width: calc(100vw / var(--boards));
+  perspective: 100vw;
+}
+
+li {
+  height: 100vh;
+  width: var(--width);
+  position: relative;
+  animation: flip 16000ms var(--delay, -14000ms) infinite ease-in-out;
+  animation-timing-function: cubic-bezier(.25,-0.3,.75,1.18);
+  
+  transform-style: preserve-3d;
+  transform-origin: var(--origin, center center);
+  
+  background-image: url(https://images.unsplash.com/photo-1525576998318-b4736ddba6c3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=2e59b8aab2519a8d230bbf655eb2b71e);
+}
+
+li,
+li::before,
+li::after {
+  background-repeat: no-repeat;
+  background-size: 100vw calc(100vw * 9 / 16);
+  background-position: calc(var(--offset-x, 0) * 100vw) center;
+}
+
+li::before,
+li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  transform: 
+    translateX(calc(99% * var(--direction, 1)))
+    rotateY(calc(120deg * var(--direction, 1)));
+  transform-origin: var(--origin-x, 0%) 50%;
+}
+
+li::before {
+  background-image: url(https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=53a6022c048f8595d90636e94b7fabf3);
+  --direction: -1;
+  --origin-x: 100%;
+  
+}
+li::after {
+  background-image: url(https://images.unsplash.com/photo-1522735555435-a8fe18da2089?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d404d2ca601ddb2b3b33c4e3f41291b4);
+  --direction: 1;
+  --origin-x: 0%;
+}
+
+@keyframes flip {
+  0%, 20% {
+    transform: rotateY(0deg);
+  }
+  33.333%, 53.333% {
+    transform: rotateY(120deg);
+  }
+  66.667%, 86.667% {
+    transform: rotateY(240deg);
+  }
+  100% {
+    transform: rotateY(360deg)
+  }
+}
+
+
+
+/* This provides a way to rotate the billboard */
+/* 
+ul {
+  transform: rotateX(90deg);
+  transform-style: preserve-3d;
+}
+
+body {
+  perspective: 100vw;
+}
+/* */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: hsl(0, 0%, 0%);
+}
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
