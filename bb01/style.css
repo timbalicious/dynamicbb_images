@@ -15,7 +15,7 @@ li {
   transform-style: preserve-3d;
   transform-origin: var(--origin, center center);
   
-  background-image: url(https://images.unsplash.com/photo-1525576998318-b4736ddba6c3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=2e59b8aab2519a8d230bbf655eb2b71e);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image01);
 }
 
 li,
@@ -42,13 +42,13 @@ li::after {
 }
 
 li::before {
-  background-image: url(https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=53a6022c048f8595d90636e94b7fabf3);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image02);
   --direction: -1;
   --origin-x: 100%;
   
 }
 li::after {
-  background-image: url(https://images.unsplash.com/photo-1522735555435-a8fe18da2089?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d404d2ca601ddb2b3b33c4e3f41291b4);
+  background-image: url(https://timbalicious.github.io/dynamicbb_images/bb01/image03);
   --direction: 1;
   --origin-x: 0%;
 }
