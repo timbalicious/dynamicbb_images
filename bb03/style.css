@@ -22,7 +22,7 @@ li,
 li::before,
 li::after {
   background-repeat: no-repeat;
-  background-size: 100vw calc(100vw * 9 / 16);
+  background-size: 100vw 380px;
   background-position: calc(var(--offset-x, 0) * 100vw) center;
 }
 
